@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
@@ -31,7 +31,9 @@
             <ul class="list">
               <li><a href="index.html" class="navigation-link">Agencja</a></li>
               <li>
-                <a href="portfolio.html" class="navigation-link">Portfolio</a>
+                <a href="portfolio.html" class="navigation-link active"
+                  >Portfolio</a
+                >
               </li>
               <li><a href="/kontakt" class="navigation-link">Kontakt</a></li>
             </ul>
@@ -78,13 +80,23 @@
           <ul class="list-portfolio">
             <li>
               <figure class="list-portfolio-item">
-                <img
-                  class="portfolio-img"
-                  src="images/technocrack.jpg"
-                  alt="strona internetowa technocrack"
-                  width="370"
-                  height="294"
-                />
+                <div class="container-transform">
+                  <img
+                    class="portfolio-img"
+                    src="images/technocrack.jpg"
+                    alt="strona internetowa technocrack"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p>
+                      Technocrack jest popularną platformą wykorzystywaną do
+                      rozpowszechniania koronawirusa. Firmy wykorzystują tę
+                      platformę do celów szpiegowskich i ataków na
+                      niezabezpieczone serwery konkurencji
+                    </p>
+                  </div>
+                </div>
                 <figcaption class="portfolio-item">
                   <h3 class="portfolio-name">Technocrack</h3>
                   <span class="portfolio-type">Strona internetowa</span>

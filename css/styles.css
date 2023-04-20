@@ -30,6 +30,20 @@ header {
   padding-bottom: 94px;
 }
 
+.active {
+  position: relative;
+}
+.active:after {
+  content: "";
+  position: absolute;
+  background: var(--brand-color-blue);
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  margin-top: 28px;
+  display: block;
+}
+
 .bottom-contact {
   background-color: var(--brand-color-background);
   padding: 60px 0;
@@ -132,6 +146,23 @@ header {
   margin-bottom: 30px;
   border-radius: 4px;
   background-color: var(--brand-color-grey);
+}
+.icon-modal-close {
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 0;
+  margin: 8px;
+  position: absolute;
+  fill: var(--brand-color-black);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--brand-color-white);
+}
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
 }
 .join-us {
   justify-content: flex-start;
@@ -245,6 +276,25 @@ header {
   text-decoration: none;
   letter-spacing: 0.03em;
 }
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 221px;
+  left: 536px;
+  border-radius: 4px;
+  background-color: var(--brand-color-white);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 1024px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 .motto {
   background-image: url("/goit-markup-hw-04/images/baner.jpg"),
     linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
@@ -287,7 +337,6 @@ header {
 .navigation-link:focus {
   color: var(--brand-color-blue);
 }
-
 .order {
   color: var(--brand-color-white);
   background-color: var(--brand-color-blue);
@@ -359,6 +408,24 @@ header {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+.our-work-image {
+  display: flex;
+  position: relative;
+}
+.our-work-image > .our-work-image-dsc {
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--brand-color-white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding: 27px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
 .our-work-text {
   color: var(--brand-color-black);
   font-weight: 900;
@@ -421,6 +488,30 @@ header {
 }
 .portfolio-img {
   display: block;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+.overlay p {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 49px 45px 49px 24px;
+}
+.container-transform {
+  position: relative;
+  overflow: hidden;
+}
+.container-transform:hover .overlay {
+  transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item {
   border-bottom-style: solid;
