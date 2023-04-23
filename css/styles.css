@@ -188,6 +188,11 @@ header {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+  transition: 1s ease-out;
+}
+.is-hidden .modal {
+  transform: scale(0);
+  opacity: 0;
 }
 .join-us {
   justify-content: flex-start;
@@ -302,7 +307,7 @@ header {
   background-color: var(--brand-color-white);
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  transform: scale(1);
+  transition: 1s ease-in-out;
 }
 .motto {
   background-image: url("/goit-markup-hw-04/images/baner.jpg"),
