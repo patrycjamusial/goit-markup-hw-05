@@ -34,7 +34,7 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 1024px;
+  height: 100%;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
@@ -82,6 +82,8 @@ header {
   column-gap: 30px;
 }
 .contact-link {
+  display: flex;
+  align-items: center;
   color: var(--brand-color-text-grey);
   font-weight: 500;
   font-size: 14px;
@@ -179,10 +181,15 @@ header {
   padding: 6px;
   margin: 8px;
   position: absolute;
-  fill: var(--brand-color-black);
+  color: var(--brand-color-black);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--brand-color-white);
+}
+.icon-modal-close:hover {
+  cursor: pointer;
+  color: var(--brand-color-blue);
+  border-color: var(--brand-color-blue);
 }
 .is-hidden {
   pointer-events: none;
@@ -528,15 +535,8 @@ header {
   display: block;
 }
 .portfolio-item {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: rgba(238, 238, 238, 1);
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: rgba(238, 238, 238, 1);
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-right-color: rgba(238, 238, 238, 1);
+  border: 1px solid rgba(238, 238, 238, 1);
+  border-top: none;
   padding: 20px 24px;
 }
 .portfolio-name {
